@@ -74,7 +74,6 @@ function App() {
     return winMessages[winAmount];
   };
   const calculateWinnings = (winners) => {
-    debugger;
     let winAmount = checkForWinners(playersChoice, winners);
     let newBalance = balance + winAwards[winAmount];
     setBalance(newBalance);
@@ -92,7 +91,6 @@ function App() {
   );
   useEffect(() => {
     if(complete){
-      debugger;
       console.log('complete: ', complete)
       console.log('balance: ', balance)
       calculateWinnings(winningBalls);
