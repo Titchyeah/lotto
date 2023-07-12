@@ -134,10 +134,10 @@ function App() {
     <div className="flex flex-col h-screen w-screen bg-[#2F2F2F] items-center">
       {complete && congratsPopup}
       <div className="w-full flex">
-        <div className="flex w-1/6 justify-center text-xl text-[#FFDD4A]">
+        <div className="flex w-1/4 justify-center text-xl text-[#FFDD4A]">
           Balance: £{balance}
         </div>
-        <div className="w-2/3 flex justify-center items-center my-1 font-bold text-3xl text-[#FFDD4A]">
+        <div className="w-1/2 flex justify-center items-center my-1 font-bold text-3xl text-[#FFDD4A]">
           Lotto
         </div>
       </div>
