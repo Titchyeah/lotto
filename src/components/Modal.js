@@ -11,7 +11,7 @@ function Modal({ children, actionBar }) {
   return ReactDOM.createPortal(
     <div className="border border-red-500 border-4">
       <div className="fixed inset-0 bg-gray-300 opacity-80"></div>
-      <div className="fixed inset-0 m-auto p-10 max-w-md max-h-1/3 bg-white h-2/3 flex flex-col justify-around border border-indigo-500 border-4">
+      <div className="fixed inset-0 m-auto p-10 max-w-md max-h-1/3 bg-[#449DD1] h-2/3 flex flex-col justify-around border border-indigo-500 border-4">
         <div className="flex flex-col justify-between">{children}</div>
         <div className="flex justify-center">{actionBar}</div>
       </div>

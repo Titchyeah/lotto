@@ -136,13 +136,13 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-gradient-to-b from-white to-indigo-700 items-center">
+    <div className="flex flex-col h-screen w-screen bg-[#449DD1] items-center">
       {complete && congratsPopup}
       <div className="w-full flex">
-        <div className="flex w-1/6 justify-center text-xl">
+        <div className="flex w-1/6 justify-center text-xl text-white">
           Balance: £{balance}
         </div>
-        <div className="w-2/3 flex justify-center items-center my-1 font-bold text-3xl text-black">
+        <div className="w-2/3 flex justify-center items-center my-1 font-bold text-3xl text-white">
           Lotto
         </div>
       </div>

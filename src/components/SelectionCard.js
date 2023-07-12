@@ -97,7 +97,7 @@ function SelectionCard({ updateChoice, playClicked, resetClicked }) {
           Lucky Dip
         </Button>
       </div>
-      <h2 className="flex justify-center border text-center font-bold m-2">
+      <h2 className="flex justify-center border text-center text-white font-bold m-2">
         Please choose 6 numbers or click lucky dip to have 6 random numbers
         picked for you
       </h2>
