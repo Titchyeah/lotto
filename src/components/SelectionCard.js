@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import Button from './Button.js';
 
-function SelectionCard({updateChoice, playClicked, luckyClicked, resetClicked}) {
+function SelectionCard({ updateChoice, playClicked, resetClicked }) {
   const [pressedButtons, setPressedButtons] = useState([]);
 
   const handleButtonClick = (buttonValue) => {
     if (pressedButtons.length > 5 && !pressedButtons.includes(buttonValue)) {
-      alert('error too many choices');
+      alert('Error: maximum selections reached');
       return;
     }
     if (!pressedButtons.includes(buttonValue)) {
@@ -41,20 +41,24 @@ function SelectionCard({updateChoice, playClicked, luckyClicked, resetClicked}) 
 
   useEffect(() => {
     updateChoice(pressedButtons);
-  }, [pressedButtons])
-  
+  }, [pressedButtons]);
 
   const isPressed = (buttonValue) => {
-    if(pressedButtons.includes(buttonValue)){
+    if (pressedButtons.includes(buttonValue)) {
       return 'selected';
     }
-  }
+  };
 
   const renderedButtons = () => {
     const buttons = [];
     for (let i = 1; i < 60; i++) {
       buttons.push(
-        <Button bingo selected={isPressed(i)} key={i} onClick={() => handleButtonClick(i)}>
+        <Button
+          bingo
+          selected={isPressed(i)}
+          key={i}
+          onClick={() => handleButtonClick(i)}
+        >
           {i}
         </Button>
       );
@@ -75,27 +79,36 @@ function SelectionCard({updateChoice, playClicked, luckyClicked, resetClicked}) 
   };
 
   return (
-    <div className='md:max-w-4/5 justify-center'>
-    <div className="flex justify-center">
-        <Button primary onClick={playClicked} disabled={pressedButtons.length<6}>
+    <div className="md:max-w-4/5 justify-center">
+      <div className="flex justify-center">
+        <Button
+          primary
+          onClick={playClicked}
+          disabled={pressedButtons.length < 6}
+        >
           Play Game
         </Button>
-    <div className="flex justify-center mx-2">
-        <Button secondary onClick={handleReset}>Reset Game</Button>
-      </div>
+        <div className="flex justify-center mx-2">
+          <Button secondary onClick={handleReset}>
+            Reset Game
+          </Button>
+        </div>
         <Button primary onClick={handleLuckyDip}>
           Lucky Dip
         </Button>
       </div>
-      <h2 className='flex justify-center border text-center font-bold m-2'>Please choose 6 numbers or click lucky dip to have 6 random numbers picked for you</h2>
-    <div className="flex flex-col justify-center items-center">
-      Selection Choice
-      <div className="flex flex-wrap w-9/12 justify-center max-w-1/2">
-        {renderedButtons()}
+      <h2 className="flex justify-center border text-center font-bold m-2">
+        Please choose 6 numbers or click lucky dip to have 6 random numbers
+        picked for you
+      </h2>
+      <div className="flex flex-col justify-center items-center">
+        Selection Choice
+        <div className="flex flex-wrap w-9/12 justify-center max-w-1/2">
+          {renderedButtons()}
+        </div>
+        Players Choice:
+        <div className="flex justify-center m-1">{renderedChoices()}</div>
       </div>
-      Players Choice:
-      <div className="flex justify-center m-1">{renderedChoices()}</div>
-    </div>
     </div>
   );
 }

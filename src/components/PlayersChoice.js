@@ -8,14 +8,14 @@ function PlayersChoice({ chosen, winners }) {
       </Button>
     );
   });
-  console.log(renderedChoices)
+  console.log(renderedChoices);
 
   const renderedWinners = winners.map((choice, index) => {
     return (
       <div key={index}>
-      <Button bingo disabled key={choice}>
-        {choice}
-      </Button>
+        <Button bingo disabled key={choice}>
+          {choice}
+        </Button>
       </div>
     );
   });
@@ -28,7 +28,7 @@ function PlayersChoice({ chosen, winners }) {
       </div>
     );
   };
-  // renderedChoices();
+
   return (
     <div className="flex flex-col justify-center items-center">
       Players Choice
