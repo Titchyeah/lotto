@@ -25,7 +25,6 @@ function SelectionCard({ updateChoice, playClicked, resetClicked }) {
       var r = Math.floor(Math.random() * 59) + 1;
       if (arr.indexOf(r) === -1) arr.push(r);
     }
-    console.log('array = ', arr);
     return arr;
   }
 
@@ -97,11 +96,11 @@ function SelectionCard({ updateChoice, playClicked, resetClicked }) {
           Lucky Dip
         </Button>
       </div>
-      <h2 className="flex justify-center border text-center text-white font-bold m-2">
+      <h2 className="flex justify-center text-center text-[#DAD2D8] font-bold m-2">
         Please choose 6 numbers or click lucky dip to have 6 random numbers
         picked for you
       </h2>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center text-[#DAD2D8] ">
         Selection Choice
         <div className="flex flex-wrap w-9/12 justify-center max-w-1/2">
           {renderedButtons()}

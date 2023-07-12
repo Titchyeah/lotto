@@ -26,7 +26,6 @@ function App() {
           // setPlaying(false);
           setWinner('');
           setComplete(true);
-          console.log('winners are ', array);
           clearInterval(interval);
           resolve();
         }
@@ -91,8 +90,6 @@ function App() {
   );
   useEffect(() => {
     if(complete){
-      console.log('complete: ', complete)
-      console.log('balance: ', balance)
       calculateWinnings(winningBalls);
     }
   }, [complete])
@@ -103,7 +100,6 @@ function App() {
   }
 
   function onResetClicked() {
-    console.log('reset');
     setPlayersChoice([]);
   }
 
@@ -127,7 +123,6 @@ function App() {
       var r = Math.floor(Math.random() * 59) + 1;
       if (arr.indexOf(r) === -1) arr.push(r);
     }
-    console.log('array = ', arr);
     return arr;
   }
 
@@ -136,13 +131,13 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-[#449DD1] items-center">
+    <div className="flex flex-col h-screen w-screen bg-[#2F2F2F] items-center">
       {complete && congratsPopup}
       <div className="w-full flex">
-        <div className="flex w-1/6 justify-center text-xl text-white">
+        <div className="flex w-1/6 justify-center text-xl text-[#FFDD4A]">
           Balance: £{balance}
         </div>
-        <div className="w-2/3 flex justify-center items-center my-1 font-bold text-3xl text-white">
+        <div className="w-2/3 flex justify-center items-center my-1 font-bold text-3xl text-[#FFDD4A]">
           Lotto
         </div>
       </div>

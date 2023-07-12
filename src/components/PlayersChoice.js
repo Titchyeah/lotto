@@ -8,7 +8,6 @@ function PlayersChoice({ chosen, winners }) {
       </Button>
     );
   });
-  console.log(renderedChoices);
 
   const renderedWinners = winners.map((choice, index) => {
     return (
