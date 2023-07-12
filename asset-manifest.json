@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lotto/static/css/main.babce913.css",
-    "main.js": "/lotto/static/js/main.e4a3a181.js",
+    "main.js": "/lotto/static/js/main.a1c735a5.js",
     "index.html": "/lotto/index.html",
     "main.babce913.css.map": "/lotto/static/css/main.babce913.css.map",
-    "main.e4a3a181.js.map": "/lotto/static/js/main.e4a3a181.js.map"
+    "main.a1c735a5.js.map": "/lotto/static/js/main.a1c735a5.js.map"
   },
   "entrypoints": [
     "static/css/main.babce913.css",
-    "static/js/main.e4a3a181.js"
+    "static/js/main.a1c735a5.js"
   ]
 }
